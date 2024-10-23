@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: Arial, sans-serif;
+    line-height: 1,6;
+    background-color: #f9f9f9;
+    color: #333;
+
+}
+
+
+
+
+
+h1 {
+  h1 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
+    color: #f28a30; /* Cor vibrante para destaque */
+    font-weight: bold; /* Negrito para dar mais ênfase */
+    margin: 20px 0; /* Ajusta o espaçamento acima e abaixo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efeito de sombra para destaque */
+    display: flex;
+    justify-content: center;
+    display: flexbox;
+}
+
+}
+
+
+
+
+
+
+ 
+ menu a {
+    background-color: #f9f9f9;
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+
+
+
+ }
+
+ menu a:hover {
+    background-color: darkblue;
+    color: white;
+
+ }
+
+
+
+ header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 15;
+    max-width: 60em;
+    text-align: center;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center; /* Alinha os itens do menu no centro */
+  }
+     
+       
+    
+
+     
+
+     
+    
+    
+
+     
+
+    .instagram-feed h3 a{
+        text-decoration: none;
+
+    }
+
+class btg{
+
+    display:inline-block;
+    
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+
+ 
+
+
+
+
+
+  }
+
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+
+
+
+
+
+
+        h3 p{
+            margin: 40px;
+            max-width: 800px; /* Largura máxima para o conteúdo */
+            margin: auto; /* Centraliza o conteúdo */
+            padding: 30px; /* Preenchimento interno */
+            background-color: #fff; /* Fundo branco para contraste */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            margin-left: 10px;
+            font-family: Arial, sans-serif; /* Fonte legível */
+    font-size: 14px; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #333; /* Cor do texto */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    margin: 10px; /* Remove margens padrão */
+    padding: 0px; /* Adiciona preenchimento ao corpo */
+    margin-bottom: 0; 
+    margin-right: 10px;
+    
+        }
+
+  button  btn-toggle-on {
+
+    background-color: #ADD8E6;
+    border-radius: 5px;
+    padding: 1em;
+    color: var(#333);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    **margin-left: 5em;
+    width: 550px;**
+
+ }
+               
+
+
+
