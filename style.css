@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height: 1,6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #0000CD, #00FF00, #00008B);
+  background-size: 200%;
+  color: #fff;
+  animation: shine 3s infinite linear;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: aquamarine;
+}
+
+@keyframes shine {
+  0% {
+      background-position: 0%;
+  }
+
+  100% {
+      background-position: 200%;
+  }
+}
+
+.logo-difusora{
+  height: 60px;
+}
+
+.carousel{
+  width: 98vw;
+}
+
+.carousel-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-item{
+  height: 150px;
+  width: 50vw;
+  background-color: #525050;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  background-color: #f28a30;
+  border-radius: 10px;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+  opacity: .6;
+}
+
+.carousel-control-prev:active, .carousel-control-next:active{
+  opacity: .4;
+  transform: translateY(4px);
+  height: 140px;
+  width: 200px;
+}
+
+.influencer {
+  text-align: center; /* Centraliza o texto */
+  font-size: 3rem; /* Aumenta o tamanho da fonte */
+  color: #f28a30; /* Cor vibrante para destaque */
+  font-weight: bold; /* Negrito para dar mais ênfase */
+  margin: 20px 0; /* Ajusta o espaçamento acima e abaixo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efeito de sombra para destaque */
+  display: flex;
+  justify-content: center;
+  display: flexbox;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: center; /* Alinha os itens do menu no centro */
+  }
+
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+  }
+
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+
+.sobre-mim{
+  margin: 40px;
+  max-width: 800px; /* Largura máxima para o conteúdo */
+  margin: auto; /* Centraliza o conteúdo */
+  padding: 30px; /* Preenchimento interno */
+  background-color: #fff; /* Fundo branco para contraste */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  margin-left: 10px;
+  font-family: Arial, sans-serif; /* Fonte legível */
+  font-size: 14px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  margin: 10px; /* Remove margens padrão */
+  padding: 0px; /* Adiciona preenchimento ao corpo */
+  margin-bottom: 0; 
+  margin-right: 10px;   
+}
+       
+.partners{
+  width: 300px;
+}
