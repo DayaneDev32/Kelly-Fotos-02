@@ -40,6 +40,43 @@ body{
   height: 60px;
 }
 
+.welcome-text{
+  display: flex;
+  justify-content: center;
+}
+
+.kelly-apresentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.kelly-img{
+  width: 45vw;
+}
+
+.sobre-mim{
+  margin: 40px;
+  max-width: 800px; /* Largura máxima para o conteúdo */
+  margin: auto; /* Centraliza o conteúdo */
+  padding: 30px; /* Preenchimento interno */
+  background-color: #fff; /* Fundo branco para contraste */
+  margin-left: 10px;
+  font-family: Arial, sans-serif; /* Fonte legível */
+  font-size: 16px; /* Tamanho da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  color: #333; /* Cor do texto */
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  margin: 10px; /* Remove margens padrão */
+  padding: 0px; /* Adiciona preenchimento ao corpo */
+  margin-bottom: 0; 
+  margin-right: 10px;
+}
+
 .carousel{
   width: 98vw;
 }
@@ -52,8 +89,8 @@ body{
 }
 
 .carousel-item{
-  height: 150px;
-  width: 50vw;
+  height: 170px;
+  width: 60vw;
   background-color: #525050;
   color: #fff;
   border-radius: 10px;
@@ -86,48 +123,58 @@ body{
   justify-content: center;
   display: flexbox;
 }
-
-  .navbar {
-    display: flex;
-    justify-content: center; /* Alinha os itens do menu no centro */
-  }
-
-
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px; /* Espaçamento entre os itens */
-  }
-
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-  }
-
-.sobre-mim{
-  margin: 40px;
-  max-width: 800px; /* Largura máxima para o conteúdo */
-  margin: auto; /* Centraliza o conteúdo */
-  padding: 30px; /* Preenchimento interno */
-  background-color: #fff; /* Fundo branco para contraste */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  margin-left: 10px;
-  font-family: Arial, sans-serif; /* Fonte legível */
-  font-size: 14px; /* Tamanho da fonte */
-  line-height: 1.6; /* Espaçamento entre linhas */
-  color: #333; /* Cor do texto */
-  background-color: #f9f9f9; /* Cor de fundo suave */
-  margin: 10px; /* Remove margens padrão */
-  padding: 0px; /* Adiciona preenchimento ao corpo */
-  margin-bottom: 0; 
-  margin-right: 10px;   
-}
        
+footer{
+  margin-bottom: 20px;
+  width: 98vw;
+  height: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.partners-container {
+  display: inline-block;
+  height: 160px;
+  animation: animated 15s linear infinite;
+}
+
 .partners{
   width: 300px;
+}
+
+@keyframes animated {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.contacts-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#insta{
+  display:inline-block; 
+  padding:10px 15px; 
+  background-color:#E1306C; 
+  color:white; 
+  text-decoration:none; 
+  border-radius:5px;
+}
+
+.whats-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#whats{
+  text-decoration: none;
+  background-color: #E1306C;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
