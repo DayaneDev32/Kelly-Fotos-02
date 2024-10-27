@@ -107,9 +107,7 @@ body{
 
 .carousel-control-prev:active, .carousel-control-next:active{
   opacity: .4;
-  transform: translateY(4px);
-  height: 140px;
-  width: 200px;
+  transform: translateY(-4px);
 }
 
 .influencer {
