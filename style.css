@@ -1,14 +1,14 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body{
-    line-height: 1,6;
-    background-color: #f9f9f9;
-    color: #333;
+  line-height: 1,6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .name {
@@ -28,11 +28,11 @@ body{
 
 @keyframes shine {
   0% {
-      background-position: 0%;
+    background-position: 0%;
   }
 
   100% {
-      background-position: 200%;
+    background-position: 200%;
   }
 }
 
@@ -56,7 +56,7 @@ body{
 }
 
 .kelly-img{
-  width: 45vw;
+  width: 36vw;
 }
 
 .sobre-mim{
@@ -67,12 +67,12 @@ body{
   background-color: #fff; /* Fundo branco para contraste */
   margin-left: 10px;
   font-family: Arial, sans-serif; /* Fonte legível */
-  font-size: 16px; /* Tamanho da fonte */
+  font-size: 20px; /* Tamanho da fonte */
   line-height: 1.6; /* Espaçamento entre linhas */
   color: #333; /* Cor do texto */
   background-color: #f9f9f9; /* Cor de fundo suave */
   margin: 10px; /* Remove margens padrão */
-  padding: 0px; /* Adiciona preenchimento ao corpo */
+  padding: 20px; /* Adiciona preenchimento ao corpo */
   margin-bottom: 0; 
   margin-right: 10px;
 }
@@ -97,7 +97,7 @@ body{
 }
 
 .carousel-control-prev, .carousel-control-next{
-  background-color: #f28a30;
+  background-color: #50C878;
   border-radius: 10px;
 }
 
@@ -113,7 +113,7 @@ body{
 .influencer {
   text-align: center; /* Centraliza o texto */
   font-size: 3rem; /* Aumenta o tamanho da fonte */
-  color: #f28a30; /* Cor vibrante para destaque */
+  color: #6A0DAD; /* Cor vibrante para destaque */
   font-weight: bold; /* Negrito para dar mais ênfase */
   margin: 20px 0; /* Ajusta o espaçamento acima e abaixo */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efeito de sombra para destaque */
@@ -122,7 +122,7 @@ body{
   display: flexbox;
 }
        
-footer{
+.partners-container-big{
   margin-bottom: 20px;
   width: 98vw;
   height: 300px;
@@ -151,13 +151,14 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 10px;
 }
 
-#insta{
+#insta, #whats, #podcast{
   display:inline-block; 
   padding:10px 15px; 
-  background-color:#E1306C; 
-  color:white; 
+  background-color:#FF69B4; 
+  color:#fff; 
   text-decoration:none; 
   border-radius:5px;
 }
@@ -169,10 +170,49 @@ footer{
   justify-content: center;
 }
 
-#whats{
+footer{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: #000;
+}
+
+.dt-link{
   text-decoration: none;
-  background-color: #E1306C;
-  color: #fff;
+  color: #000;
+}
+
+.another{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 10px;
+}
+
+.news-container{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-buttons{
+  display: flex;
+  gap: 10px;
+}
+
+#news-count, #prev-button, #next-button{
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: #50C878;
+  border: none;
+}
+
+#news-count{
+  background-color: transparent;
+  border: none;
+}
+
+.weather-container{
+  width: auto;
 }
