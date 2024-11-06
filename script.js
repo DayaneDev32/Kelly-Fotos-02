@@ -6,9 +6,6 @@ const newsCount = document.getElementById("news-count");
 
 function showNews(news, i) {
 	const newsItem = news.items[i];
-
-	console.log(newsItem);
-
 	const img = JSON.parse(newsItem.imagens);
 
 	newsTitle.innerHTML = newsItem.titulo;
@@ -25,21 +22,32 @@ async function searchNews(i) {
 		"http://servicodados.ibge.gov.br/api/v3/noticias/",
 	).then((data) => data.json());
 
-	console.log(news);
-
 	showNews(news, i);
 }
 
 function prevNews() {
-	let prev = 0;
+	// const contentCount = newsCount.innerHTML.;
 
-	searchNews(prev);
+	// if (count >= 0) {
+	const countPrev = 0;
+	searchNews(countPrev);
+	// }
+
+	// count = 0;
+	// console.log(newsCount.innerHTML);
+	// searchNews(count);
 }
 
 function nextNews() {
-	let next = 1;
+	const countNext = 1;
 
-	searchNews(next);
+	searchNews(countNext);
 }
 
 searchNews(0);
+
+const cityWeather = document.getElementById("city-weather");
+const tempWeather = document.getElementById("temp-weather");
+const chanceWeather = document.getElementById("chance-weather");
+const mmWeather = document.getElementById("mm-weather");
+
