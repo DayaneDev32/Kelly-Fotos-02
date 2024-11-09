@@ -146,6 +146,11 @@ body{
   }
 }
 
+.social-media{
+  display: flex;
+  justify-content: space-around;
+}
+
 .contacts-container{
   display: flex;
   justify-content: center;
@@ -219,4 +224,18 @@ footer{
 
 .weather-container{
   width: auto;
+  background-color: #b3aeae;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#city-to-weather{
+  padding: 5px 10px;
+  border-radius: 10px; 
+}
+
+#search-weather{
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
