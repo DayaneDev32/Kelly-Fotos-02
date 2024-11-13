@@ -158,6 +158,8 @@ searchCity.addEventListener("click", () => searchWeather(cityToWeather.value));
 
 function setBackgrounColorWeather() {
 	const shadeOfTheSky = document.querySelector(".weather-container");
+	const shadeOfTheTextCaceres = document.querySelector(".weather-container");
+	const shadeOfTheTextSearch = document.querySelector(".weather-container");
 
 	const dateNow = new Date();
 	const housNow = dateNow.getHours();
@@ -165,18 +167,28 @@ function setBackgrounColorWeather() {
 	const secondsNow = dateNow.getSeconds();
 	const timeNow = [housNow, minutesNow, secondsNow].join(":");
 
-	if (timeNow >= "06:30:00" && timeNow <= "12:00:00") {
+	if (timeNow >= "06:30:01" && timeNow <= "12:00:00") {
 		shadeOfTheSky.style.background =
 			"linear-gradient(135deg, #ffdee9, #b5fffc)";
-	} else if (timeNow >= "12:00:00" && timeNow <= "18:30:00") {
+		shadeOfTheTextCaceres.style.color = "#000";
+		shadeOfTheTextSearch.style.color = "#000";
+	} else if (timeNow >= "12:00:01" && timeNow <= "18:30:00") {
 		shadeOfTheSky.style.background =
 			"linear-gradient(135deg, #ffd89b, #19547b)";
-	} else if (timeNow >= "18:30:00" || timeNow <= "06:30:00") {
+		shadeOfTheTextCaceres.style.color = "#000";
+		shadeOfTheTextSearch.style.color = "#000";
+	} else if (timeNow >= "18:30:01" || timeNow <= "06:30:00") {
 		shadeOfTheSky.style.background =
 			"linear-gradient(135deg, #141e30, #243b55)";
-		shadeOfTheSky.style.color = "#fff";
+		shadeOfTheTextCaceres.style.color = "#fff";
+		shadeOfTheTextSearch.style.color = "#fff";
+		console.log("noite");
 	}
 }
 
 setInterval(setBackgrounColorWeather, 1000);
 setBackgrounColorWeather();
+
+console.log(
+	"https://www.instagram.com/api/v1/users/web_profile_info/?username=kellypaulafreitas",
+);
