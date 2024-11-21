@@ -9,9 +9,11 @@ function showNews(news, i) {
 	const img = JSON.parse(newsItem.imagens);
 
 	newsTitle.innerHTML = newsItem.titulo;
+	newsTitle.style.height = "50px";
 	newsContent.innerHTML = newsItem.introducao;
 	newsImg.src = `https://agenciadenoticias.ibge.gov.br/${img.image_fulltext}`;
-	newsImg.style.width = "50vw";
+	newsImg.style.width = "70%";
+	newsImg.style.height = "30%";
 	newsImg.style.borderRadius = "10px";
 	newsLink.href = newsItem.link;
 	newsCount.innerHTML = i + 1;
@@ -74,8 +76,6 @@ const sunset = document.getElementById("sunset");
 const cityToWeather = document.getElementById("city-to-weather");
 
 function showWeather(data) {
-	console.log(data);
-
 	if (data.name === "Cáceres") {
 		tempWeatherCaceres.innerHTML = ` ${Math.floor(data.main.temp)}°C`;
 		tempWeatherMinCaceres.innerHTML = ` ${Math.floor(data.main.temp_min) - 2}°C`;
@@ -162,33 +162,76 @@ function setBackgrounColorWeather() {
 	const shadeOfTheTextSearch = document.querySelector(".weather-container");
 
 	const dateNow = new Date();
-	const housNow = dateNow.getHours();
+	const hoursNow = dateNow.getHours();
 	const minutesNow = dateNow.getMinutes();
 	const secondsNow = dateNow.getSeconds();
-	const timeNow = [housNow, minutesNow, secondsNow].join(":");
+	const timeNow = [hoursNow, minutesNow, secondsNow].join(":");
 
-	if (timeNow >= "06:30:01" && timeNow <= "12:00:00") {
-		shadeOfTheSky.style.background =
-			"linear-gradient(135deg, #ffdee9, #b5fffc)";
-		shadeOfTheTextCaceres.style.color = "#000";
-		shadeOfTheTextSearch.style.color = "#000";
-	} else if (timeNow >= "12:00:01" && timeNow <= "18:30:00") {
-		shadeOfTheSky.style.background =
-			"linear-gradient(135deg, #ffd89b, #19547b)";
-		shadeOfTheTextCaceres.style.color = "#000";
-		shadeOfTheTextSearch.style.color = "#000";
-	} else if (timeNow >= "18:30:01" || timeNow <= "06:30:00") {
+	if (hoursNow < 6) {
 		shadeOfTheSky.style.background =
 			"linear-gradient(135deg, #141e30, #243b55)";
 		shadeOfTheTextCaceres.style.color = "#fff";
 		shadeOfTheTextSearch.style.color = "#fff";
-		console.log("noite");
+	} else if (hoursNow >= 6 && hoursNow < 12) {
+		shadeOfTheSky.style.background =
+			"linear-gradient(135deg, #ffdee9, #b5fffc)";
+		shadeOfTheTextCaceres.style.color = "#000";
+		shadeOfTheTextSearch.style.color = "#000";
+	} else if (hoursNow >= 12 && hoursNow < 18) {
+		shadeOfTheSky.style.background =
+			"linear-gradient(135deg, #ffd89b, #19547b)";
+		shadeOfTheTextCaceres.style.color = "#000";
+		shadeOfTheTextSearch.style.color = "#000";
+	} else if (hoursNow >= 18) {
+		shadeOfTheSky.style.background =
+			"linear-gradient(135deg, #141e30, #243b55)";
+		shadeOfTheTextCaceres.style.color = "#fff";
+		shadeOfTheTextSearch.style.color = "#fff";
 	}
 }
 
 setInterval(setBackgrounColorWeather, 1000);
 setBackgrounColorWeather();
 
-console.log(
-	"https://www.instagram.com/api/v1/users/web_profile_info/?username=kellypaulafreitas",
-);
+const loadVideo = (iframe) => {
+	const cId = "UCfRej9pMbByJQ8oUpr0FOtQ";
+	const channelURL = encodeURIComponent(
+		`http://www.youtube.com/feeds/videos.xml?channel_id=${cId}`,
+	);
+	const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+
+	fetch(reqURL)
+		.then((response) => response.json)
+		.then((result) => {
+			console.log(result);
+			const videoNumber = iframe.getAttribute("vnum");
+			const link = result.items[videoNumber].link;
+			const id = link.substring(link.indexOf("=") + 1);
+			iframe.setAttribute(
+				"src",
+				`http://www.youtube.com/embed/${id}?controls=0&autoplay=1`,
+			);
+		})
+		.catch((error) => console.log("error", error));
+};
+
+const iframes = document.getElementsByClassName("latestVideo");
+for (let i = 0, len = iframes.length; i < len; i++) {
+	loadVideo(iframes[i]);
+}
+
+// console.log(
+// 	"https://www.instagram.com/api/v1/users/web_profile_info/?username=kellypaulafreitas",
+// );
+
+// console.log('http://www.youtube.com/embed?listType=user_uploads&list=@queveescutapodcast');
+
+// async function youtube() {
+// 	const lastVideo = await fetch(
+// 		"http://www.youtube.com/embed?listType=user_uploads&list=@queveescutapodcast",
+// 	).then((response) => response.json());
+
+// 	console.log(lastVideo);
+// }
+
+// youtube();

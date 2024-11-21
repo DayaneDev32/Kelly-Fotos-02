@@ -163,8 +163,9 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 10px;
+  text-align: center;
+  gap: 30px;
+  margin: 30px;
 }
 
 #insta, #whats, #podcast{
@@ -176,11 +177,12 @@ header{
   border-radius:5px;
 }
 
-.whats-container{
+#whats-container, #podcast-container, #insta-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 footer{
@@ -203,14 +205,19 @@ footer{
 }
 
 .news-container{
-  width: 55vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   background-color: #b3b3b3;
   border-radius: 8px;
   padding: 10px 20px;
   margin: 10px;
+}
+
+#news-title{
+  font-weight: bold;
 }
 
 .news-buttons{
@@ -246,4 +253,85 @@ footer{
   padding: 5px 10px;
   border-radius: 10px;
   margin-left: 10px;
+}
+
+@media (max-width: 430px) {
+
+  .name-container{
+    height: 40vh;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .welcome-text{
+    font-size: 2rem;
+  }
+
+  .kelly-apresentation{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .kelly-img{
+    width: 90vw;
+  }
+
+  figcaption{
+    font-size: 14px;
+  }
+
+  .sobre-mim{
+    font-size: 14px;
+  }
+
+  .carousel-item{
+    height: 280px;
+    font-size: 14px;
+  }
+
+  .influencer{
+    font-size: 2rem;
+  }
+
+  .social-media{
+    flex-direction: column;
+  }
+
+  .instagram-feed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .instagram-media{
+    width: 80vw;
+  }
+
+  .last-podcast-video{
+    width: 80vw;
+    height: 50vw;
+  }
+
+  .contacts-container{
+    flex-direction: column;
+  }
+
+  .another{
+    flex-direction: column;
+  }
+
+  .news-container{
+    width: 90vw;
+  }
+
+  .news-img{
+    width: 80vw;
+    height: 80vw;
+  }
+
+  footer{
+    font-size: 14px;
+  }
 }
