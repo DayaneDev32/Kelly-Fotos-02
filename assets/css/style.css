@@ -255,6 +255,41 @@ footer{
   margin-left: 10px;
 }
 
+
+.instagram-feed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-youtube-video{
+  width: auto;
+}
+
+.youtube-container{
+  padding: 10px 0;
+  background-color: #4d4c4c80;
+  width: 90%;
+  margin: 10px 5%;
+}
+
+.youtube-img{
+  filter: drop-shadow(-2px -2px 2px 1px rgba(0, 0, 0, 0.2));
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-img, .youtube-title{
+  width: 90%;
+  margin: 5px 5%;
+  border-radius: 10px;
+}
+
+.youtube-title{
+  text-decoration: none;
+  color: #333;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 430px) {
 
   .name-container{
@@ -300,18 +335,16 @@ footer{
   }
 
   .instagram-feed{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
 
   .instagram-media{
     width: 80vw;
   }
 
-  .last-podcast-video{
-    width: 80vw;
-    height: 50vw;
+  .last-youtube-video{
+    width: 100vw;
+    height: 60vw;
   }
 
   .contacts-container{

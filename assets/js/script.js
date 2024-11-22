@@ -193,45 +193,41 @@ function setBackgrounColorWeather() {
 setInterval(setBackgrounColorWeather, 1000);
 setBackgrounColorWeather();
 
-const loadVideo = (iframe) => {
-	const cId = "UCfRej9pMbByJQ8oUpr0FOtQ";
-	const channelURL = encodeURIComponent(
-		`http://www.youtube.com/feeds/videos.xml?channel_id=${cId}`,
-	);
-	const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+//colocar chamada a API do instagram aqui
 
-	fetch(reqURL)
-		.then((response) => response.json)
-		.then((result) => {
-			console.log(result);
-			const videoNumber = iframe.getAttribute("vnum");
-			const link = result.items[videoNumber].link;
-			const id = link.substring(link.indexOf("=") + 1);
-			iframe.setAttribute(
-				"src",
-				`http://www.youtube.com/embed/${id}?controls=0&autoplay=1`,
-			);
+const youtubeVideo = document.querySelector(".last-youtube-video");
+
+async function searcLastYoutubeVideo() {
+	youtubeVideo.innerHTML = "";
+	const lastVideo = await fetch(
+		"https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUXYvwJbbIm-o1O4SthRV2Lw&key=AIzaSyBA11F7Oqv_9sUxmDcwXi3facdB08IKRNw",
+	)
+		.then((res) => res.json())
+		.then((data) => {
+			youtubeVideo.innerHTML += `
+			<a target='_blank' href='https://www.youtube.com/watch?v=${data.items[0].snippet.resourceId.videoId}' >
+				<div class='youtube-container'>	
+					<p class='youtube-title'>${data.items[0].snippet.title}</p>
+					<img class='youtube-img' src='${data.items[0].snippet.thumbnails.maxres.url}'>
+				<div>
+			</a>
+			`;
 		})
-		.catch((error) => console.log("error", error));
-};
-
-const iframes = document.getElementsByClassName("latestVideo");
-for (let i = 0, len = iframes.length; i < len; i++) {
-	loadVideo(iframes[i]);
+		.catch((err) => {
+			console.log(err);
+			youtubeVideo.innerHTML +=
+				"<h5>Algo não saiu como esperado, tente novamente mais tarde!</h5>";
+		});
 }
 
-// console.log(
-// 	"https://www.instagram.com/api/v1/users/web_profile_info/?username=kellypaulafreitas",
-// );
+setInterval(searcLastYoutubeVideo, 60000);
+searcLastYoutubeVideo();
 
-// console.log('http://www.youtube.com/embed?listType=user_uploads&list=@queveescutapodcast');
+// function searchByKeyword() {
+// 	var results = YouTube.Search.list('id,snippet', { q: 'queveescuta', maxResults: 1 });
 
-// async function youtube() {
-// 	const lastVideo = await fetch(
-// 		"http://www.youtube.com/embed?listType=user_uploads&list=@queveescutapodcast",
-// 	).then((response) => response.json());
-
-// 	console.log(lastVideo);
+// 	var item = results.items[0];
+// 	Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
 // }
 
-// youtube();
+// searchByKeyword();
