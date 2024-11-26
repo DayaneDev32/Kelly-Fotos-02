@@ -60,6 +60,12 @@
 <body>
 
     <header>
+        <nav>
+            <a class="home" href="#">Home</a>
+            <a class="podcast" href="./assets/pages/podcast.html">Podcast</a>
+            <a class="news" href="./assets/pages/prevAndNews.html">Noticias</a>
+            <a class="weather" href="./assets/pages/prevAndNews.html">Previsão do tempo</a>
+        </nav>
         <div>
             <img class="logo-difusora" src="./assets/img/logo-difusora.png">
             <audio class="music" _ngcontent-c0="" class="playAudio" controls
@@ -68,7 +74,6 @@
                 <source _ngcontent-c0="" type="audio/mp3">
             </audio>
         </div>
-        <!-- <img src="./assets/img/5432755.jpg" /> -->
     </header>
 
     <section class="name-container">
@@ -170,12 +175,12 @@
 
             <div class="instagram-feed">
                 <blockquote class="instagram-media"
-                    data-instgrm-permalink="https://www.instagram.com/reel/DCjxRlPPoBb/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    data-instgrm-permalink="https://www.instagram.com/reel/DCr3SXTvd8y/?utm_source=ig_embed&amp;utm_campaign=loading"
                     data-instgrm-version="14"
-                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:80vw; width:-webkit-calc(90% - 2px); width:calc(90% - 2px);">
+                    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
                     <div style="padding:16px;"> <a
-                            href="https://www.instagram.com/reel/DCjxRlPPoBb/?utm_source=ig_embed&amp;utm_campaign=loading"
-                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:80%;"
+                            href="https://www.instagram.com/reel/DCr3SXTvd8y/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
                             target="_blank">
                             <div style=" display: flex; flex-direction: row; align-items: center;">
                                 <div
@@ -255,21 +260,15 @@
                         </a>
                         <p
                             style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                            <a href="https://www.instagram.com/reel/DCjxRlPPoBb/?utm_source=ig_embed&amp;utm_campaign=loading"
+                            <a href="https://www.instagram.com/reel/DCr3SXTvd8y/?utm_source=ig_embed&amp;utm_campaign=loading"
                                 style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                                target="_blank">Uma publicação compartilhada por Kelly Paula Freitas
-                                (@kellypaulafreitas)</a>
+                                target="_blank">Uma publicação compartilhada por Rádio Difusora de Cáceres MT
+                                (@difusoracaceres)</a>
                         </p>
                     </div>
                 </blockquote>
                 <script async src="//www.instagram.com/embed.js"></script>
 
-
-                <div class="last-youtube-video"><iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/fwHiU_QmUBg?si=adoRDnSiZYDpMSaa&amp;controls=0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
             </div>
 
@@ -299,50 +298,6 @@
                         href="https://wa.me/5565996875896?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20parceria">(65)
                         9 9687-5896</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="another">
-        <div class="news-container">
-            <h3>Notícias</h3>
-            <p id="news-title"></p>
-            <p><span id="news-content"></span><a id="news-link">notícia completa</a></p>
-            <img id="news-img" />
-            <div class="news-buttons">
-                <button id="prev-button" onclick="prevNews()">Anterior</button>
-                <button id="news-count">0</button>
-                <button id="next-button" onclick="nextNews()">Próxima</button>
-            </div>
-        </div>
-        <div class="weather-container">
-            <div id="caceres-weather">
-                <h3>Previsão do tempo para Cáceres - MT
-                </h3>
-                <p>Umidade do ar: <span id="humidity-weather-caceres"></p>
-                Temperatura: <span id="temp-weather-caceres"></span>.
-                <p>
-                    Minima:<span id="temp-weather-min-caceres"></span>.
-                    Máxima:<span id="temp-weather-max-caceres"></span>.
-                </p>
-                <p>Céu: <span id="description-weather-caceres"></span></p>
-                <img id="img-weather-caceres" src="" />
-                <p>Amanhecer: <span id="sunrise-caceres"></span> Anoitecer: <span id="sunset-caceres"></span></p>
-            </div>
-            <div id="search-weather-container">
-                <input placeholder="Escreva o nome de cidade" id="city-to-weather" /><button
-                    id="search-weather">Buscar</button>
-                <p>Cidade: <span id="city-weather"></span>.
-                </p>
-                <p>Umidade do ar: <span id="humidity-weather"></p>
-                Temperatura:<span id="temp-weather"></span>.
-                <p>
-                    Minima:<span id="temp-weather-min"></span>.
-                    Máxima:<span id="temp-weather-max"></span>.
-                </p>
-                <p>Céu: <span id="description-weather"></span></p>
-                <img id="img-weather" src="" />
-                <p>Amanhecer: <span id="sunrise"></span> Anoitecer: <span id="sunset"></span></p>
             </div>
         </div>
     </section>
