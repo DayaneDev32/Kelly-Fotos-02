@@ -18,6 +18,12 @@ header{
   justify-content: space-between;
   background-color: #d4afcf;
   padding: 10px 0 5px;
+  flex-wrap: wrap;
+}
+
+nav{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .home, .podcast, .news, .weather{
@@ -45,6 +51,12 @@ header{
 .logo-difusora{
   height: 40px;
   margin-top: -30px;
+}
+
+.frequency{
+  height: 40px;
+  margin-left: -4px;
+  margin-top: -32px;
 }
 
 .music{
@@ -325,6 +337,10 @@ footer{
 
 
 @media (max-width: 430px) {
+
+  .music{
+    width: 200px;
+  }
 
   .name-container{
     height: 40vh;
