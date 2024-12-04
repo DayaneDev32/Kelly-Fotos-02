@@ -195,13 +195,23 @@ setBackgrounColorWeather();
 
 //colocar chamada a API do instagram aqui
 
+const smartphoneMenu = document.querySelector(".list-menu");
+const smartphoneNav = document.querySelector(".smartphone-header");
 
+smartphoneMenu.addEventListener("click", () => {
+	if (smartphoneNav.style.display === "none") {
+		smartphoneNav.style.display = "flex";
+	} else {
+		smartphoneNav.style.display = "none";
+	}
+});
 
-// function searchByKeyword() {
-// 	var results = YouTube.Search.list('id,snippet', { q: 'queveescuta', maxResults: 1 });
+function showMenu() {
+	const smartphoneNav = document.querySelector(".smartphone-header");
 
-// 	var item = results.items[0];
-// 	Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-// }
-
-// searchByKeyword();
+	if (smartphoneNav.style.display === "none") {
+		smartphoneNav.style.display = "flex";
+	} else {
+		smartphoneNav.style.display = "none";
+	}
+}

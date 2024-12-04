@@ -24,8 +24,8 @@ function fetchRecentVideos(pageToken = "") {
 
 				videoCard.innerHTML = `
                     <a class='link-video' href="${videoLink}" target="_blank">
-                        <p>${videoTitle}</p>
-                        <img src="${videoThumbnail}" alt="${videoTitle}">
+                        <p class='title-video'>${videoTitle}</p>
+                        <img class='img-video' src="${videoThumbnail}" alt="${videoTitle}">
                     </a>
                 `;
 
@@ -44,20 +44,6 @@ function fetchRecentVideos(pageToken = "") {
 					}
 				};
 			}
-
-			const linkVideo = document.querySelector(".link-video");
-			const body = document.getElementsByTagName("body");
-
-			videoList.style.textDecoration = "none";
-			videoList.style.textAlign = "center";
-			videoList.style.display = "grid";
-			// const tela = body.style.width;
-			// if (tela > 400) {
-			videoList.style.gridTemplateColumns = "repeat(3, 1fr)";
-			// }
-			// videoList.style.margin = "20px";
-			// videoList.style.padding = "20px";
-			// videoContainer.style.margin = "20px";
 		})
 		.catch((error) => console.error("Erro ao buscar vídeos:", error));
 }

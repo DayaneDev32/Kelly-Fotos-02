@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   text-decoration: none;
+  transition: all 1s;
 }
 
 body{
@@ -21,9 +22,17 @@ header{
   flex-wrap: wrap;
 }
 
-nav{
+.laptop-header{
   display: flex;
   flex-wrap: wrap;
+}
+
+.smartphone-header{
+  display: none;
+}
+
+.list-menu{
+  display: none;
 }
 
 .home, .podcast, .news, .weather{
@@ -31,7 +40,7 @@ nav{
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  margin: 20px;
+  margin: 0 10px 10px;
   background-color: #ff69b4af;
   padding: 10px 20px;
   border-radius: 5px;
@@ -337,6 +346,36 @@ footer{
 
 
 @media (max-width: 430px) {
+
+  header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .laptop-header{
+    display: none;
+  }
+
+  .smartphone-header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .list-menu{
+    display: flex;
+    height: 30px;
+    width: 30px;
+  }
+
+  .home, .podcast, .news, .weather{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
 
   .music{
     width: 200px;
